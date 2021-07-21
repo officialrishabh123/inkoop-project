@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
+
+
+*{
+    padding: 0;
+    margin:0;
+    font-family: 'Crete Round', serif;
+}
+
+.main{
+    /* width: 100vw; */
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+.main .sidebar{
+    background: rgb(255, 255, 255);
+    /* text-align: center; */
+}
+.main .sidebar .col-1{
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+
+}
+
+.main .sidebar .col-2{
+    padding-left: 20%;
+}
+.main .sidebar .col-2 ul li{
+    padding: 25px;
+    color: black;
+    list-style: none;
+}
+
+.main .sidebar .col-2 ul li a{
+    text-decoration: none;
+    color:rgba(34, 34, 34, 0.589);
+}
+
+.main .sidebar .col-2 ul li:nth-child(1){
+    
+    text-decoration:line-through;
+    text-decoration-color: #ff2164;
+    font-size: 20px;
+   
+}
+
+.main .sidebar .col-3 .button {
+    background: rgba(255, 17, 17, 0.801);
+    padding:  5px 0px;
+    margin: 5px 60px;
+    border-radius: 30px;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+/* cointainer */
+
+.main .container{
+    width: 100%;
+}
+.main .container .upper-col{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin:  8% 3%;
+    text-transform: capitalize;
+}
+
+.main .container .upper-col .col-1{
+    font-size: 5em;
+    
+}
+.main .container .upper-col .col-2 div{
+    width: 30%; 
+    color: tomato;
+      padding-top: 20px;
+    border-bottom: 3px solid tomato;   
+}
+
+
+.main .container .middle-col{
+display: flex;
+align-items: center;
+justify-content: center;
+/* flex-wrap: wrap; */
+}
+.main .container .middle-col .column{
+    margin: 20px;
+    background: white;
+    box-shadow: 5px 1px 20px  1px rgba(0,0,0,0.1),
+    1px 1px 20px  1px rgba(0,0,0,0.1),
+    1px 1px 20px  1px rgba(0,0,0,0.1);
+    padding:20px;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+
+}
+.main .container .middle-col .column img{
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+}
+
+.main .container .middle-col .column p{
+    text-align: center;
+    /* padding:20px; */
+    padding-top: 15px;
+    font-size: 17px;
+}   
+.bottom-col{
+    display: none;
+}
+.fa-bars,.fa-shopping-cart{
+    display:none;
+}
+.col-0 .col-2{
+    display: none;
+}
+
+@media(max-width:1000px){
+    .main{
+        display: block;
+        margin: 0 30px;
+    }
+    .main .sidebar{
+        /* margin: 0px; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* text-align: center; */
+    }
+    .main .sidebar .col-1 span:nth-child(2)
+    {
+        display: none;
+    }
+    .main .sidebar .col-2{
+        display: none;
+        
+    }
+    .main .sidebar .col-3 .button{
+        display: none;
+    }
+    .fa{
+        color: tomato;
+        font-size: 20px;
+    }
+    .fa-bars,.fa-shopping-cart{
+        display:block;
+    }
+    .col-0:hover .col-2{
+        position: absolute;
+        display: block;
+        margin: none;
+        left: 0;
+        /* width: 100%; */
+        /* height: 100%; */
+        background: tomato;
+        /* bottom: 1px; */
+        padding:none;
+    }
+
+    .fa:nth-child(2){
+        transform: rotateY(180deg);
+    }
+    .main .container .upper-col{
+        display: block;
+    }
+    .main .container .upper-col .col-2{
+        display: none;
+    }
+    
+    .main .container .upper-col .col-1{
+        font-size: 3em;
+        font-weight: bolder;
+    }
+.main .container .middle-col
+{
+    flex-wrap: wrap;
+}
+.main .container .middle-col .column{
+    flex-direction: column;
+}
+ 
+#bot{
+    display: none;
+}
+.bottom-col{
+    display: block;
+    width: 100%; 
+        color: rgb(134, 134, 133);
+          padding-top: 20px;
+              }
+              #border-bottom{
+                  width: 30%;
+                  /* background: tomato; */
+                  border-bottom: 2px solid tomato;
+              }
+      div:nth-last-child(1){
+          padding:30px 0;
+      }
+
+}
